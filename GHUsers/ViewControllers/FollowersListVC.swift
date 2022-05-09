@@ -78,6 +78,8 @@ class FollowersListVC: UIViewController {
         var snapshot = NSDiffableDataSourceSnapshot<Section, Follower>()
         snapshot.appendSections([.main])
         snapshot.appendItems(followers)
-        DispatchQueue.main.async { self.dataSource.apply(snapshot, animatingDifferences: true) } //TODO: Check if async is necessary
+        DispatchQueue.main.async {
+            self.dataSource.apply(snapshot, animatingDifferences: true)
+        } //TODO: Check if async is necessary
     }
 }
