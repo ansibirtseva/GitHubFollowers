@@ -10,6 +10,7 @@
 		B5243AE22822DB8F0032A16C /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5243AE12822DB8F0032A16C /* FollowerCell.swift */; };
 		B5243AE42822DF3C0032A16C /* GHAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5243AE32822DF3C0032A16C /* GHAvatarImageView.swift */; };
 		B5243AF0282992520032A16C /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5243AEF282992520032A16C /* UIHelper.swift */; };
+		B5243AF7282D9C740032A16C /* GHEmptyStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5243AF6282D9C740032A16C /* GHEmptyStateView.swift */; };
 		B534D3A628206D1F00735237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534D3A528206D1F00735237 /* AppDelegate.swift */; };
 		B534D3A828206D1F00735237 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B534D3A728206D1F00735237 /* SceneDelegate.swift */; };
 		B534D3AF28206D2100735237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B534D3AE28206D2100735237 /* Assets.xcassets */; };
@@ -33,6 +34,7 @@
 		B5243AE12822DB8F0032A16C /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		B5243AE32822DF3C0032A16C /* GHAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHAvatarImageView.swift; sourceTree = "<group>"; };
 		B5243AEF282992520032A16C /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
+		B5243AF6282D9C740032A16C /* GHEmptyStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GHEmptyStateView.swift; sourceTree = "<group>"; };
 		B534D3A228206D1F00735237 /* GHUsers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHUsers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B534D3A528206D1F00735237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B534D3A728206D1F00735237 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5243AF1282D9BFA0032A16C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5243AE32822DF3C0032A16C /* GHAvatarImageView.swift */,
+				B5243AF6282D9C740032A16C /* GHEmptyStateView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B5243AF2282D9C080032A16C /* Labels */ = {
+			isa = PBXGroup;
+			children = (
+				B5D2446D28216FB7005F7C19 /* GHTitleLabel.swift */,
+				B5D2446F28217183005F7C19 /* GHBodyLabel.swift */,
+			);
+			path = Labels;
+			sourceTree = "<group>";
+		};
+		B5243AF3282D9C130032A16C /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				B534D3BD282077F700735237 /* GHButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
+		B5243AF4282D9C230032A16C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B5243AE12822DB8F0032A16C /* FollowerCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		B5243AF5282D9C3A0032A16C /* TextFields */ = {
+			isa = PBXGroup;
+			children = (
+				B534D3BF28207B7700735237 /* GHTextField.swift */,
+			);
+			path = TextFields;
+			sourceTree = "<group>";
+		};
 		B534D39928206D1F00735237 = {
 			isa = PBXGroup;
 			children = (
@@ -87,7 +131,7 @@
 				B5D244892821C9BB005F7C19 /* Utilities */,
 				B5D244842821BFA8005F7C19 /* Managers */,
 				B5D24469282166E0005F7C19 /* ViewControllers */,
-				B5D2446A282166EC005F7C19 /* Views */,
+				B5D2446A282166EC005F7C19 /* CustomViews */,
 				B5D2447C2821797E005F7C19 /* Extensions */,
 				B5D24481282179A2005F7C19 /* Models */,
 				B534D3A528206D1F00735237 /* AppDelegate.swift */,
@@ -109,18 +153,17 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		B5D2446A282166EC005F7C19 /* Views */ = {
+		B5D2446A282166EC005F7C19 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				B5243AF5282D9C3A0032A16C /* TextFields */,
+				B5243AF4282D9C230032A16C /* Cells */,
+				B5243AF3282D9C130032A16C /* Buttons */,
+				B5243AF2282D9C080032A16C /* Labels */,
+				B5243AF1282D9BFA0032A16C /* Views */,
 				B5D244712821718D005F7C19 /* GHAlertVC.swift */,
-				B5D2446F28217183005F7C19 /* GHBodyLabel.swift */,
-				B534D3BD282077F700735237 /* GHButton.swift */,
-				B534D3BF28207B7700735237 /* GHTextField.swift */,
-				B5D2446D28216FB7005F7C19 /* GHTitleLabel.swift */,
-				B5243AE12822DB8F0032A16C /* FollowerCell.swift */,
-				B5243AE32822DF3C0032A16C /* GHAvatarImageView.swift */,
 			);
-			path = Views;
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 		B5D2447C2821797E005F7C19 /* Extensions */ = {
@@ -244,6 +287,7 @@
 				B5243AE22822DB8F0032A16C /* FollowerCell.swift in Sources */,
 				B534D3BC2820713300735237 /* FavoritesListVC.swift in Sources */,
 				B5D2446E28216FB7005F7C19 /* GHTitleLabel.swift in Sources */,
+				B5243AF7282D9C740032A16C /* GHEmptyStateView.swift in Sources */,
 				B534D3A828206D1F00735237 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

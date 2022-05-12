@@ -36,6 +36,8 @@ class GHTextField: UITextField {
         autocorrectionType = .no
 
         placeholder = "Enter a username"
+        adjustsFontForContentSizeCategory = true
+
         returnKeyType = .go
     }
 }

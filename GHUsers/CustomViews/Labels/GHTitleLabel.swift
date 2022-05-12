@@ -19,11 +19,11 @@ class GHTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
 
-
     init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         super.init(frame: .zero)
         self.textAlignment = textAlignment
-        self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
+        font = UIFont.preferredFont(forTextStyle: .title1)
+        adjustsFontForContentSizeCategory = true
         configure()
     }
 
@@ -33,6 +33,7 @@ class GHTitleLabel: UILabel {
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
+        numberOfLines = 0
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

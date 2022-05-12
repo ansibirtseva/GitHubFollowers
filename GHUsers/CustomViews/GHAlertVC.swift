@@ -10,10 +10,10 @@ import UIKit
 
 class GHAlertVC: UIViewController {
     
-    let containerView   = UIView()
-    let titleLabel      = GHTitleLabel(textAlignment: .center, fontSize: 20)
-    let messageLabel    = GHBodyLabel(textAlignment: .center)
-    let actionButton    = GHButton(backgroundColor: .systemPink, title: "Ok")
+    let containerView = UIView()
+    let titleLabel = GHTitleLabel(textAlignment: .center, fontSize: 20)
+    let messageLabel = GHBodyLabel(textAlignment: .center)
+    let actionButton = GHButton(backgroundColor: .systemPink, title: "Ok")
     
     var alertTitle: String?
     var message: String?
@@ -92,7 +92,6 @@ class GHAlertVC: UIViewController {
     func configureMessageLabel() {
         containerView.addSubview(messageLabel)
         messageLabel.text = message ?? "Unable to complete request"
-        messageLabel.numberOfLines = 4
         
         NSLayoutConstraint.activate([
             messageLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 8),
