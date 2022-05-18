@@ -21,20 +21,6 @@ extension UIViewController {
         }
     }
 
-    fileprivate func addActivityIndicator() {
-        let activityIndicator = UIActivityIndicatorView(style: .large)
-        containerView.addSubview(activityIndicator)
-
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-        ])
-
-        activityIndicator.startAnimating()
-    }
-
     func showLoadingView() {
         containerView = UIView(frame: view.bounds)
         view.addSubview(containerView)
@@ -64,5 +50,19 @@ extension UIViewController {
 
     func returnMax<T> (number1: T, number2: T) -> T where T: Comparable {
         return max(number1, number2)
+    }
+
+    fileprivate func addActivityIndicator() {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        containerView.addSubview(activityIndicator)
+
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            activityIndicator.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+
+        activityIndicator.startAnimating()
     }
 }

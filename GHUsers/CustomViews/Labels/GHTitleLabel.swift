@@ -22,18 +22,23 @@ class GHTitleLabel: UILabel {
     init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
         super.init(frame: .zero)
         self.textAlignment = textAlignment
-        font = UIFont.preferredFont(forTextStyle: .title1)
-        adjustsFontForContentSizeCategory = true
+        font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
         configure()
     }
 
+    init(textAlignment: NSTextAlignment) {
+        super.init(frame: .zero)
+        self.textAlignment = textAlignment
+        font = UIFont.preferredFont(forTextStyle: .title2)
+        adjustsFontForContentSizeCategory = true
+        configure()
+    }
 
     private func configure() {
         textColor = .label
         adjustsFontSizeToFitWidth = true
         minimumScaleFactor = 0.9
         lineBreakMode = .byTruncatingTail
-        numberOfLines = 0
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

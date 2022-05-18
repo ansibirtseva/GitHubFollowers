@@ -36,7 +36,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let favoriteListVC = FavoritesListVC()
         favoriteListVC.title = "Favorites"
         favoriteListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
-
         return UINavigationController(rootViewController: favoriteListVC)
     }
 

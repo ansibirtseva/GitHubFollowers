@@ -11,7 +11,7 @@ class FollowerCell: UICollectionViewCell {
 
     static let reuseID = "FollowerCell"
     let avatarImageView = GHAvatarImageView(frame: .zero)
-    let usernameLabel   = GHTitleLabel(textAlignment: .center, fontSize: 16)
+    let usernameLabel   = GHTitleLabel(textAlignment: .center)
     let stackView = UIStackView()
 
     override init(frame: CGRect) {
@@ -30,7 +30,6 @@ class FollowerCell: UICollectionViewCell {
         avatarImageView.downloadImage(from: follower.avatarUrl)
     }
 
-
     private func configure() {
         self.addSubview(stackView)
         stackView.addArrangedSubview(avatarImageView)
@@ -41,6 +40,8 @@ class FollowerCell: UICollectionViewCell {
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([
+            avatarImageView.heightAnchor.constraint(equalTo: avatarImageView.widthAnchor),
+
             stackView.topAnchor.constraint(equalTo: topAnchor, constant: padding),
             stackView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: padding),
             stackView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -padding),
